@@ -1,4 +1,4 @@
-class SentMailsController < ApplicationController
+class SentMailsController < ActionController::Base
   # GET /sent_mails
   # GET /sent_mails.xml
   def index
