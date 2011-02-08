@@ -1,0 +1,17 @@
+<h1>Listing Sent Emails</h1>
+
+<table>
+  <tr>
+    <th>To:</th>
+    <th>Subject:</th>
+    <th></th>
+  </tr>
+
+<% @sent_mails.each do |sent_mail| %>
+  <tr>
+    <td><%= sent_mail[:to] %></td>
+    <td><%= sent_mail[:subject] %></td>
+    <td><%= link_to 'Show', sent_mail_path(sent_mail[:id]) %></td>
+  </tr>
+<% end %>
+</table>
