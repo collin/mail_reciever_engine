@@ -4,7 +4,7 @@ class SentMail
   end
   
   def self.all
-    (storage[:all] || []).map{|id| storage[id] }
+    (storage[:all] || []).map{|id| find(id) }
   end
   
   def self.find(id)

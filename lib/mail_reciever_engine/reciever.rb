@@ -7,7 +7,6 @@ class MailRecieverEngine::Reciever
   
   def deliver!(mail)
     id = mail.message_id.split("@").first
-    MailRecieverEngine::Storage[:all] ||= []
     MailRecieverEngine::Storage[:all] += [id]
     MailRecieverEngine::Storage[id] = {
       :header => mail.header.to_s,
