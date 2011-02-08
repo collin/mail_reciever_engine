@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mail_reciever_engine}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Collin Miller"]
@@ -19,11 +19,20 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "app/controllers/sent_mails_controller.rb",
+    "app/models/sent_mail.rb",
+    "app/views/sent_mails/index.html.erb",
+    "app/views/sent_mails/show.html.erb",
+    "config/routes.rb",
     "lib/mail_reciever_engine.rb",
+    "lib/mail_reciever_engine/reciever.rb",
+    "lib/mail_reciever_engine/storage.rb",
+    "mail_reciever_engine.gemspec",
     "test/helper.rb",
     "test/test_mail_reciever_engine.rb"
   ]
